@@ -49,21 +49,21 @@ BPC enables you to define and sell your customers your own choice of inventory b
 ### Get All packages
 Call this method to get all packages from your inventory 
 ```csharp
-var packages = bpcManager?.GetPackages();
+var packages = await bpcManager?.GetPackages();
 ```
 
 
 ### Get Countries filtered by Package
 This function will retrieve all countries that are associated with a particular package 
 ```csharp
-var countries = bpcManager?.GetCountriesByPackage(PackageObject);
+var countries = await bpcManager?.GetCountriesByPackage(PackageObject);
 ```
 
 ### Get Protocols filtered by Package
 This function will retrieve all protocols that are associated with a particular package 
 
 ```csharp
-var protocols = bpcManager?.GetProtocolsByPackage(PackageObject);
+var protocols = await bpcManager?.GetProtocolsByPackage(PackageObject);
 ```
 
 
@@ -72,25 +72,25 @@ var protocols = bpcManager?.GetProtocolsByPackage(PackageObject);
 ### Get all Countries
 This function will provide the list of all countries present in your inventory
 ``` csharp
-var countries = bpcManager?.GetCountries();
+var countries = await bpcManager?.GetCountries();
 ```
 
 
 ### Get Countries filtered by Protocol
 This function will provide you the list of countries that are mapped with a specific protocol
 ```csharp
-var countries = bpcManager?.GetCountriesByProtocol(protocolObject);
+var countries = await bpcManager?.GetCountriesByProtocol(protocolObject);
 ```
 
 
 ### Get all Cities
 This function will provide the list of all cities present in your inventory
 ```csharp
-var cities = bpcManager?.GetCities();
+var cities = await bpcManager?.GetCities();
 ```
 
 ### Get cities by protocol
 This function will provide you the list of cities that are mapped with a specific protocol
 ```csharp
-var cities = bpcManager?.GetCitiesByProtocol(protocol)
+var cities = await bpcManager?.GetCitiesByProtocol(protocol)
 ```
