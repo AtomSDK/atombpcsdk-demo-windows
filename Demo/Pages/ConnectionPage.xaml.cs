@@ -1,4 +1,5 @@
 ﻿using Atom.BPC;
+using Atom.Core.Extensions;
 using Atom.Core.Models;
 using Atom.SDK.Core;
 using Demo.Helpers;
@@ -175,6 +176,7 @@ namespace Demo
         private async void comboProtocols_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Countries = await _BpcManager.GetCountriesByProtocol(Protocol);
+            Countries = await Countries.PingAsync();
             Country = Countries?.FirstOrDefault();
         }
 
