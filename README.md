@@ -73,6 +73,12 @@ var protocols = await bpcManager?.GetProtocolsByPackage(PackageObject);
 This function will provide the list of all countries present in your inventory
 ``` csharp
 var countries = await bpcManager?.GetCountries();
+
+### Ping Countries
+This function will provide latency for countries and returns sorted collection in ascending order of measured latencies
+``` csharp
+var countries = await bpcManager?.GetCountries();
+var pingedCountries = await countries?.PingAsync();
 ```
 
 
