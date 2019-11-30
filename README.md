@@ -20,7 +20,7 @@ BPC SDK provides the customizable inventory which enables you to offer different
 Install the latest version of Atom Windows BPC SDK through NuGet.
  
 ```
-Install-Package Atom.BPC.Net -Version 1.1.0
+Install-Package Atom.BPC.Net -Version 1.2.0
 ```
  ## Enable Local Inventory Support (Mandatory and strongly recommended)
  
