@@ -80,6 +80,7 @@ This function will provide latency for countries and returns sorted collection i
 ``` csharp
 var countries = await bpcManager?.GetCountries();
 var pingedCountries = await countries?.PingAsync();
+```
 
 
 ### Get Countries filtered by Protocol
