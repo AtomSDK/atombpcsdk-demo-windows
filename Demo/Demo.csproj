@@ -36,29 +36,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Atom.BPC, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atom.BPC.Net.1.2.0\lib\net45\Atom.BPC.dll</HintPath>
+    <Reference Include="Atom.BPC, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atom.BPC.Net.1.3.0\lib\net45\Atom.BPC.dll</HintPath>
     </Reference>
-    <Reference Include="Atom.BPC.Common, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atom.BPC.Net.1.2.0\lib\net45\Atom.BPC.Common.dll</HintPath>
+    <Reference Include="Atom.BPC.Common, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atom.BPC.Net.1.3.0\lib\net45\Atom.BPC.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Atom.BPC.Network, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atom.BPC.Net.1.2.0\lib\net45\Atom.BPC.Network.dll</HintPath>
+    <Reference Include="Atom.BPC.Network, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atom.BPC.Net.1.3.0\lib\net45\Atom.BPC.Network.dll</HintPath>
     </Reference>
-    <Reference Include="Atom.BPC.Repository, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atom.BPC.Net.1.2.0\lib\net45\Atom.BPC.Repository.dll</HintPath>
+    <Reference Include="Atom.BPC.Repository, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atom.BPC.Net.1.3.0\lib\net45\Atom.BPC.Repository.dll</HintPath>
     </Reference>
-    <Reference Include="Atom.BPC.Service, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atom.BPC.Net.1.2.0\lib\net45\Atom.BPC.Service.dll</HintPath>
+    <Reference Include="Atom.BPC.Service, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atom.BPC.Net.1.3.0\lib\net45\Atom.BPC.Service.dll</HintPath>
     </Reference>
-    <Reference Include="Atom.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atom.Core.Net.1.2.0\lib\net45\Atom.Core.dll</HintPath>
+    <Reference Include="Atom.Core, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atom.Core.Net.1.3.0\lib\net45\Atom.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Atom.SDK.Core, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atom.SDK.Net.3.1.0\lib\Atom.SDK.Core.dll</HintPath>
+    <Reference Include="Atom.SDK.Core, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atom.SDK.Net.3.2.0\lib\Atom.SDK.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Atom.SDK.Net, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atom.SDK.Net.3.1.0\lib\Atom.SDK.Net.dll</HintPath>
+    <Reference Include="Atom.SDK.Net, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atom.SDK.Net.3.2.0\lib\Atom.SDK.Net.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -179,9 +179,9 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Atom.BPC.Net.1.2.0\build\Atom.BPC.Net.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atom.BPC.Net.1.2.0\build\Atom.BPC.Net.targets'))" />
-    <Error Condition="!Exists('..\packages\Atom.SDK.Net.3.1.0\build\Atom.SDK.Net.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atom.SDK.Net.3.1.0\build\Atom.SDK.Net.targets'))" />
+    <Error Condition="!Exists('..\packages\Atom.SDK.Net.3.2.0\build\Atom.SDK.Net.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atom.SDK.Net.3.2.0\build\Atom.SDK.Net.targets'))" />
+    <Error Condition="!Exists('..\packages\Atom.BPC.Net.1.3.0\build\Atom.BPC.Net.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atom.BPC.Net.1.3.0\build\Atom.BPC.Net.targets'))" />
   </Target>
-  <Import Project="..\packages\Atom.BPC.Net.1.2.0\build\Atom.BPC.Net.targets" Condition="Exists('..\packages\Atom.BPC.Net.1.2.0\build\Atom.BPC.Net.targets')" />
-  <Import Project="..\packages\Atom.SDK.Net.3.1.0\build\Atom.SDK.Net.targets" Condition="Exists('..\packages\Atom.SDK.Net.3.1.0\build\Atom.SDK.Net.targets')" />
+  <Import Project="..\packages\Atom.SDK.Net.3.2.0\build\Atom.SDK.Net.targets" Condition="Exists('..\packages\Atom.SDK.Net.3.2.0\build\Atom.SDK.Net.targets')" />
+  <Import Project="..\packages\Atom.BPC.Net.1.3.0\build\Atom.BPC.Net.targets" Condition="Exists('..\packages\Atom.BPC.Net.1.3.0\build\Atom.BPC.Net.targets')" />
 </Project>
