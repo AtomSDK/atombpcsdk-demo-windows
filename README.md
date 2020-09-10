@@ -20,7 +20,7 @@ BPC SDK provides the customizable inventory which enables you to offer different
 Install the latest version of Atom Windows BPC SDK through NuGet.
  
 ```
-Install-Package Atom.BPC.Net -Version 1.5.0
+Install-Package Atom.BPC.Net -Version 1.6.0
 ```
  ## Enable Local Inventory Support (Mandatory and strongly recommended)
  
@@ -38,7 +38,7 @@ BPC SDK needs to be initialized with a “SecretKey” provided to you after you
 
 ```csharp
 var atomConfiguration = new AtomConfiguration(“SECRETKEY_GOES_HERE”);
-var bpcManager= await AtomBPCManager.InitializeAsync(atomConfiguration);
+var bpcManager = await AtomBPCManager.InitializeAsync(atomConfiguration);
 ```
 *Please note that another Initializer is available with a callback functionality. Explore more in inline documentation.*
 
@@ -75,6 +75,26 @@ This function will provide the list of all countries present in your inventory
 var countries = await bpcManager?.GetCountries();
 ```
 
+### Get Physical Countries
+This function will provide the list of all physical countries present in your inventory
+``` csharp
+var countries = await bpcManager?.GetPhysicalCountries();
+```
+
+### Get Virtual Countries
+This function will provide the list of all virtual countries present in your inventory
+``` csharp
+var countries = await bpcManager?.GetVirtualCountries();
+```
+
+### Determine if a Country is Virtual or Physical
+It can be determined by IsVirtual property of country
+``` csharp
+var country = countries.FirstOrDefault();
+var isVirtualCountry = country.IsVirtual;
+var isPhysicalCountry = !country.IsVirtual;
+```
+
 ### Ping Countries
 This function will provide latency for countries and returns sorted collection in ascending order of measured latencies
 ``` csharp
@@ -82,11 +102,17 @@ var countries = await bpcManager?.GetCountries();
 var pingedCountries = await countries?.PingAsync();
 ```
 
-
 ### Get Countries filtered by Protocol
 This function will provide you the list of countries that are mapped with a specific protocol
 ```csharp
 var countries = await bpcManager?.GetCountriesByProtocol(protocolObject);
+```
+
+### Features supported by a Country
+List of supported features (e.g. p2p) for a country can be obtained from SupportedFeatures property
+```csharp
+var country = countries.FirstOrDefault();
+List<string> countryFeatures = country.SupportedFeatures;
 ```
 
 
@@ -96,7 +122,7 @@ This function will provide the list of all cities present in your inventory
 var cities = await bpcManager?.GetCities();
 ```
 
-### Get cities by protocol
+### Get Cities filtered by Protocol
 This function will provide you the list of cities that are mapped with a specific protocol
 ```csharp
 var cities = await bpcManager?.GetCitiesByProtocol(protocol)
